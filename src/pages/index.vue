@@ -58,9 +58,11 @@ export default {
     ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
     goTo(){
       this.SET_TRANSITION_NAME('slide')
-      this.SET_STEP(2)
       this.$router.push('/documento')
     }
+  },
+  mounted(){
+    this.SET_STEP(1)
   }
 }
 </script>

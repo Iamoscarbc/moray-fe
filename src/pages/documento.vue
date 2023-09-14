@@ -29,9 +29,11 @@
     ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
       goTo(){
         this.SET_TRANSITION_NAME('slide')
-        this.SET_STEP(3)
         this.$router.push('/rostro')
       }
+    },
+    mounted(){
+      this.SET_STEP(2)
     }
   }
   </script>

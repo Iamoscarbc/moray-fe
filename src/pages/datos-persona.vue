@@ -5,7 +5,68 @@
         <strong>Por favor, ahora valida si la información que te presentamos es tu información actual</strong>
       </span>
       <div class="personal-data-page-container">
-        <img src="@/assets/img/facial_reconigzed.png" alt="">
+        <v-row class="mb-4">
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Nombres"
+              value="Oscar Manuel"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Apellidos"
+              value="Bravo Carbajal"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Número de Documento"
+              value="73260012"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Fecha de Nacimiento"
+              value="25/02/1999"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Estado Civil"
+              value="Soltero"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-text-field
+              label="Dirección"
+              value="Jr. Francisco Bolognesi 333 - Independencia"
+              disabled
+              color="#009530"
+              hide-details
+              outlined
+            ></v-text-field>
+          </v-col>
+        </v-row>
       </div>
       <v-btn
         rounded
@@ -26,11 +87,14 @@
       }
     },
     methods: {
-    ...mapMutations("global", ['SET_TRANSITION_NAME']),
+    ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
       goTo(){
         this.SET_TRANSITION_NAME('slide')
         this.$router.push('/datos-persona')  
       }
+    },
+    mounted(){
+      this.SET_STEP(4)
     }
   }
   </script>
@@ -51,11 +115,7 @@
   &-container{
     display: flex;
     justify-content: center;
-    img{
-      width: 100%;
-      max-width: 300px;
-      margin-bottom: 16px;
-    }
+    max-width: 700px;
   }
   .v-btn{
     color: #ffffff;
