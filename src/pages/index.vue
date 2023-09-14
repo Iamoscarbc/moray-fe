@@ -30,13 +30,15 @@
       rounded
       height="46"
       color="#009530"
-      :disabled="!valid">
+      :disabled="!valid"
+      @click="goToDNI()">
       Continuar
     </v-btn>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'IndexPage',
   data () {
@@ -51,40 +53,21 @@ export default {
         ]
       }
     }
+  },
+  methods: {
+    ...mapMutations("global", ['SET_TRANSITION_NAME']),
+    goToDNI(){
+      this.SET_TRANSITION_NAME('slide')
+      this.$router.push('/document')
+    }
   }
 }
 </script>
 
 <style lang="scss">
-
-.request__card{
+.index-page,.request__card{
   display: flex;
   flex-direction: column;
-  &-label{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-    color: #009530;
-    font-weight: 800;
-    font-size: 16px;
-    align-items: flex-end;
-    line-height: 22px;
-    padding-top: 5px;
-  }
-  &-img{
-    margin-bottom: 3px;
-    width: 20px;
-    height: 20px;
-  }
-  &-back{
-    cursor: pointer;
-    margin-bottom: 24px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #009530;
-  }
   &-title{
     font-size: 32px;
     line-height: 43px;
