@@ -142,7 +142,7 @@ export default {
     }
   }
   .v-btn {
-    color: #ffffff;
+    color: #ffffff !important;
     text-transform: capitalize;
     font-size: 18px;
     &.v-btn--disabled {
