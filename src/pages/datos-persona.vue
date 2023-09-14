@@ -88,7 +88,7 @@
   <script>
 import { mapMutations } from "vuex";
 export default {
-  name: "DocumentPage",
+  name: "DataPeoplePage",
   data() {
     return {
       location: {

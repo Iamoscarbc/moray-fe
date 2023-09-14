@@ -179,7 +179,7 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "DocumentPage",
+  name: "DataBusinessPage",
   data() {
     return {
       tab: 0,
