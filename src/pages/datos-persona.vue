@@ -1,11 +1,11 @@
 <template>
-    <div class="document-page request__card">
-      <span class="request__card-title">Te queremos conocer</span>
+    <div class="personal-data-page request__card">
+      <span class="request__card-title">Ahora sabemos que eres Tú</span>
       <span class="request__card-description">
-        <strong>Por favor, muéstranos tu documento de identidad para ayudarnos a validarlo.</strong>
+        <strong>Por favor, ahora valida si la información que te presentamos es tu información actual</strong>
       </span>
-      <div class="document-page-container">
-        <img src="@/assets/img/document_recognized.jpeg" alt="">
+      <div class="personal-data-page-container">
+        <img src="@/assets/img/facial_reconigzed.png" alt="">
       </div>
       <v-btn
         rounded
@@ -26,18 +26,17 @@
       }
     },
     methods: {
-    ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
+    ...mapMutations("global", ['SET_TRANSITION_NAME']),
       goTo(){
         this.SET_TRANSITION_NAME('slide')
-        this.SET_STEP(3)
-        this.$router.push('/rostro')
+        this.$router.push('/datos-persona')  
       }
     }
   }
   </script>
  
 <style lang="scss">
-.document-page,.request__card{
+.personal-data-page,.request__card{
   display: flex;
   flex-direction: column;
   &-title{
