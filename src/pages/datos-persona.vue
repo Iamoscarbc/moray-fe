@@ -94,7 +94,7 @@
       }
     },
     mounted(){
-      this.SET_STEP(4)
+      this.SET_STEP(5)
     }
   }
   </script>

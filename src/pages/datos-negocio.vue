@@ -198,7 +198,7 @@ export default {
     },
   },
   mounted() {
-    this.SET_STEP(5);
+    this.SET_STEP(6);
   },
 };
 </script>
