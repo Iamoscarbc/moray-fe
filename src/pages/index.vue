@@ -50,6 +50,7 @@ export default {
         ],
         documentNumber: [
           v => !!v || 'Número de identidad es requerido',
+          v => !!v && v.length == 8 || 'Ingresa un número de identidad correcto'
         ]
       }
     }
