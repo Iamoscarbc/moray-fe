@@ -15,7 +15,7 @@
             </span>
             <v-progress-linear :value="16.67*step" color="#009530" v-if="step != 1"></v-progress-linear>
             <transition :name="transitionName">
-              <Nuxt />
+              <Nuxt style="padding-bottom: 50px" />
             </transition>
           </div>
         </div>
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss">
+html{
+  overflow: hidden;
+}
 .row{
   margin: 0 -15px 0 -15px;
   height: 100% !important;
@@ -77,10 +80,12 @@ export default {
     background-color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    overflow-y: scroll;
+    height: 100vh;
     .request-steps{
       display: flex;
       flex-direction: column;
+      margin: 50px 0 0;
       &-label{
         width: 100%;
         text-align: center;
