@@ -13,6 +13,7 @@
         :show-arrows="false">
         <v-tab>Independiente con RUC</v-tab>
         <v-tab>Independiente sin RUC</v-tab>
+        <v-tab>Dependiente</v-tab>
       </v-tabs>
       <v-tabs-items v-model="tab">
         <v-tab-item>
@@ -102,6 +103,63 @@
               <v-col cols="12" md="6">
                 <v-text-field
                   label="Ingresos Mensuales"
+                  color="#009530"
+                  hide-details
+                  outlined
+                ></v-text-field>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-tab-item>
+        <v-tab-item>
+          <v-col>
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-text-field
+                  @click:append="searchRUC()"
+                  label="RUC"
+                  color="#009530"
+                  append-icon="mdi-magnify"
+                  outlined
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row class="mb-4">
+              <v-col cols="12" md="6">
+                <v-text-field
+                  label="Razón Social"
+                  value="Empresa EIRL"
+                  disabled
+                  color="#009530"
+                  hide-details
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field
+                  label="Dirección"
+                  value="Jr. Francisco Bolognesi 333 - Independencia"
+                  disabled
+                  color="#009530"
+                  hide-details
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field
+                  label="Fecha de Creación"
+                  value="25/02/1999"
+                  disabled
+                  color="#009530"
+                  hide-details
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field
+                  label="Ingresos Mensuales"
+                  value="S/. 3000.00"
+                  disabled
                   color="#009530"
                   hide-details
                   outlined
