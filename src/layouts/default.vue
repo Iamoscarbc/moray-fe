@@ -113,6 +113,8 @@ export default {
   .row{
     .right-section-form{
       background-image: none;
+      align-items: flex-start;
+      margin-top: 16px;
       .request-steps{
         padding: 0px 8px;
       }
