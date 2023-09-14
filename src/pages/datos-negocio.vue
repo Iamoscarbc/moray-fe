@@ -6,11 +6,10 @@
     </span>
     <div class="business-data-page-container">
       <v-tabs 
-        grow 
+        grow
         color="#009530"
         v-model="tab"
-        :vertical="isMobile"
-        :show-arrows="false">
+        :vertical="isMobile">
         <v-tab>Independiente con RUC</v-tab>
         <v-tab>Independiente sin RUC</v-tab>
         <v-tab>Dependiente</v-tab>
