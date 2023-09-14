@@ -15,7 +15,7 @@
             </span>
             <v-progress-linear :value="16.67*step" color="#009530" v-if="step != 1"></v-progress-linear>
             <transition :name="transitionName">
-              <Nuxt style="padding-bottom: 50px" />
+              <Nuxt style="padding-bottom: 150px" />
             </transition>
           </div>
         </div>
