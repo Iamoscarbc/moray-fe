@@ -5,8 +5,8 @@
       <strong>Completa tus datos correctamente para poder evaluarte.</strong>
     </span>
     <v-form v-model="valid">
-      <div class="row">
-        <div class="col-4">
+      <v-row :no-gutters="!isMobile">
+        <v-col cols="12" md="4">
           <v-select
             :items="['DNI', 'CE']"
             label="Documento"
@@ -15,16 +15,16 @@
             color="#009530"
             outlined
           ></v-select>
-        </div>
-        <div class="col-8">
+        </v-col>
+        <v-col cols="12" md="8">
           <v-text-field
             label="Número de identidad"
             :rules="rules.documentNumber"
             color="#009530"
             outlined
           ></v-text-field>
-        </div>
-      </div>
+        </v-col>
+      </v-row>
     </v-form>
     <v-btn
       rounded
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'IndexPage',
   data () {
@@ -53,6 +53,9 @@ export default {
         ]
       }
     }
+  },
+  computed: {
+    ...mapState("global", ['isMobile'])
   },
   methods: {
     ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
@@ -73,7 +76,6 @@ export default {
   flex-direction: column;
   &-title{
     font-size: 32px;
-    line-height: 43px;
     color: #4b50e6;
     font-weight: 800;
   }
@@ -87,6 +89,14 @@ export default {
     &.v-btn--disabled{
       background-color: #00942fa6 !important;
       color: #ffffff !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .index-page,.request__card{
+    &-title{
+      font-size: 28px;
     }
   }
 }
