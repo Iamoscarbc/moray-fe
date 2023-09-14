@@ -31,7 +31,7 @@
       height="46"
       color="#009530"
       :disabled="!valid"
-      @click="goToDNI()">
+      @click="goTo()">
       Continuar
     </v-btn>
   </div>
@@ -56,9 +56,9 @@ export default {
   },
   methods: {
     ...mapMutations("global", ['SET_TRANSITION_NAME']),
-    goToDNI(){
+    goTo(){
       this.SET_TRANSITION_NAME('slide')
-      this.$router.push('/document')
+      this.$router.push('/documento')
     }
   }
 }

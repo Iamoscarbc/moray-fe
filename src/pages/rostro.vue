@@ -1,23 +1,24 @@
 <template>
-    <div class="dni-page request__card">
+    <div class="face-page request__card">
       <span class="request__card-title">Te queremos conocer</span>
       <span class="request__card-description">
-        <strong>Por favor, muéstranos tu documento de identidad para ayudarnos a validarlo.</strong>
+        <strong>Por favor, colocate en un lugar iluminado para poder ver tu rostro con detalle.</strong>
       </span>
-      <div class="dni-page-container">
-        <img src="@/assets/img/document_recognized.jpeg" alt="">
+      <div class="face-page-container">
+        <img src="@/assets/img/facial_reconigzed.png" alt="">
       </div>
       <v-btn
         rounded
         height="46"
         color="#009530"
-        @click="goToFaceId()">
+        @click="goTo()">
         Continuar
       </v-btn>
     </div>
   </template>
   
   <script>
+  import { mapMutations } from 'vuex'
   export default {
     name: 'DocumentPage',
     data () {
@@ -25,15 +26,17 @@
       }
     },
     methods: {
-      goToFaceId(){
-  
+    ...mapMutations("global", ['SET_TRANSITION_NAME']),
+      goTo(){
+        this.SET_TRANSITION_NAME('slide')
+        this.$router.push('/datos-persona')  
       }
     }
   }
   </script>
  
 <style lang="scss">
-.dni-page,.request__card{
+.face-page,.request__card{
   display: flex;
   flex-direction: column;
   &-title{
