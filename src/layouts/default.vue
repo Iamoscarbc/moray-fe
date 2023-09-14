@@ -126,6 +126,7 @@ html{
       margin-top: 16px;
       .request-steps{
         padding: 0px 8px;
+        margin: 0;
       }
     }
   }
