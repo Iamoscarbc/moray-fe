@@ -5,7 +5,7 @@
       <strong>Completa tus datos correctamente para poder evaluarte.</strong>
     </span>
     <v-form v-model="valid">
-      <v-row :no-gutters="!isMobile">
+      <v-row :no-gutters="isMobile">
         <v-col cols="12" md="4">
           <v-select
             :items="['DNI', 'CE']"
