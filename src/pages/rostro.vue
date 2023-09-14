@@ -63,7 +63,7 @@
   .v-btn{
     color: #ffffff !important;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 18px !important;
     &.v-btn--disabled{
       background-color: #00942fa6 !important;
       color: #ffffff !important;
