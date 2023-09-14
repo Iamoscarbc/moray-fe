@@ -43,7 +43,7 @@ export default {
       this.$router.back()
     },
     validateSize(param){
-      if(['xs','sm','md'].includes(param)){
+      if(['xs','sm'].includes(param)){
         this.SET_IS_MOBILE(true)
       }else{
         this.SET_IS_MOBILE(false)
