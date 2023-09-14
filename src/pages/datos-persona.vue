@@ -90,7 +90,7 @@
     ...mapMutations("global", ['SET_TRANSITION_NAME', 'SET_STEP']),
       goTo(){
         this.SET_TRANSITION_NAME('slide')
-        this.$router.push('/datos-persona')  
+        this.$router.push('/datos-negocio')  
       }
     },
     mounted(){
