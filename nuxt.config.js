@@ -83,4 +83,9 @@ export default {
     name: 'slide', // Nombre de la transición CSS
     mode: 'out-in', // Cambia la dirección de la transición
   },
+
+  server: {
+    port: 3003,
+    host: "0.0.0.0"
+  }
 }
