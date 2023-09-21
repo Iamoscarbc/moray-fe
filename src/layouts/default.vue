@@ -127,12 +127,12 @@ html{
     .triangle-yellow-left{
       position: absolute;
       top: 0;
-      left: 10%;
+      left: 5%;
     }
     .triangle-orange-right{
       position: absolute;
       bottom: 0;
-      right: 1%;
+      right: 2%;
     }
   }
 }
